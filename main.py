@@ -44,7 +44,7 @@ def _send_local_file(update, context):
             photo   - Photo to send
             caption - Photo caption, 0-1024 characters
         """
-        update.message.reply_photo(f, caption="Hello world! This is me!")
+        update.message.reply_photo(f, caption="Hello! This is me!")
 
 
 def _send_mp3(update: Update, context: CallbackContext):
@@ -126,6 +126,7 @@ def message_handler_for_below_buttons(update: Update, context: CallbackContext):
         )
     elif update.message.text == GET_MP3:
         _send_mp3(update, context)
+
 
 def help(update, context):
     update.message.reply_text("""

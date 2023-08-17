@@ -48,7 +48,7 @@ def _send_local_file(update, context):
 
 
 def _send_mp3(update: Update, context: CallbackContext):
-    with open("music.mp3", "rb") as f:
+    with open("phonk_mood_-_BRAZILIAN_PHONK_FUNK_REMIX_0to8_DJ_Ritmo55_-_Bate_Forte_e_Dana_75518415.mp3", "rb") as f:
         update.message.reply_audio(f, caption="This is mp3")
 
 
@@ -95,7 +95,8 @@ def get_buttons_below_message(update: Update, context: CallbackContext):
 
     buttons = [
         [KeyboardButton(RANDOM_IMAGE)],
-        [KeyboardButton(GET_MP3)]
+        [KeyboardButton(GET_MP3)],
+        [KeyboardButton(Start)]
     ]
     context.bot.send_message(
         chat_id=update.effective_chat.id,
@@ -126,6 +127,9 @@ def message_handler_for_below_buttons(update: Update, context: CallbackContext):
         )
     elif update.message.text == GET_MP3:
         _send_mp3(update, context)
+        
+    elif update.message.text == STart:
+        return update.start
 
 
 def help(update, context):

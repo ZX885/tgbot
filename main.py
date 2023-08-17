@@ -38,7 +38,7 @@ def _send_local_file(update, context):
         RU: Мы должны открыть файл в двоичном режиме,
         иначе Telegram не сможет обработать его правильно
     """
-    with open("image.jfif", "rb") as f:
+    with open("images.jfif", "rb") as f:
         """
                 update.message.reply_photo(photo, caption=None)
             photo   - Photo to send

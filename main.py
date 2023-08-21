@@ -44,7 +44,7 @@ def _send_local_file(update, context):
             photo   - Photo to send
             caption - Photo caption, 0-1024 characters
         """
-        update.message.reply_photo(f, caption="Hello! This is me!")
+        update.message.reply_photo(f, caption="Hello world! This is me!")
 
 
 def _send_mp3(update: Update, context: CallbackContext):

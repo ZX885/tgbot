@@ -1,9 +1,20 @@
 from requests import *
 from telegram import *
 from telegram.ext import *
+import os 
+import faker
+import psycopg2
+import requests
 
 TOKEN = "6606403897:AAEW3pxmb3fhWPv9Vk5rxONDsyPlsAeD-D8"
 
+conn = psycopg2.connect(
+    user="postgres", 
+    password="12345",
+    host="localhost",
+    port="5432",
+    database="postgres"
+)
 RANDOM_IMAGE = "Random image"
 GET_MP3 = "Get mp3"
 RANDOM_IMG_URL = "https://picsum.photos/1200"

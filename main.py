@@ -8,13 +8,7 @@ import requests
 
 TOKEN = "6606403897:AAEW3pxmb3fhWPv9Vk5rxONDsyPlsAeD-D8"
 
-conn = psycopg2.connect(
-    user="postgres", 
-    password="12345",
-    host="localhost",
-    port="5432",
-    database="postgres"
-)
+
 RANDOM_IMAGE = "Random image"
 GET_MP3 = "Get mp3"
 RANDOM_IMG_URL = "https://picsum.photos/1200"
@@ -106,8 +100,7 @@ def get_buttons_below_message(update: Update, context: CallbackContext):
 
     buttons = [
         [KeyboardButton(RANDOM_IMAGE)],
-        [KeyboardButton(GET_MP3)],
-        [KeyboardButton(Say Hello)]
+        [KeyboardButton(GET_MP3)]
     ]
     context.bot.send_message(
         chat_id=update.effective_chat.id,
@@ -138,8 +131,6 @@ def message_handler_for_below_buttons(update: Update, context: CallbackContext):
         )
     elif update.message.text == GET_MP3:
         _send_mp3(update, context)
-    else:
-        print("Hello")
 
 
 def help(update, context):

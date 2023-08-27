@@ -106,7 +106,8 @@ def get_buttons_below_message(update: Update, context: CallbackContext):
 
     buttons = [
         [KeyboardButton(RANDOM_IMAGE)],
-        [KeyboardButton(GET_MP3)]
+        [KeyboardButton(GET_MP3)],
+        [KeyboardButton(Say Hello)]
     ]
     context.bot.send_message(
         chat_id=update.effective_chat.id,
@@ -137,6 +138,8 @@ def message_handler_for_below_buttons(update: Update, context: CallbackContext):
         )
     elif update.message.text == GET_MP3:
         _send_mp3(update, context)
+    else:
+        print("Hello")
 
 
 def help(update, context):

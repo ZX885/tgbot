@@ -10,6 +10,10 @@ bot = telebot.TeleBot(TOKEN)
 def handle_message(message):
     bot.reply_to(message, start)
 
+@bot.message_handler(commands=['help'])
+def handle_message_help(message):
+    bot.reply_to(message, help)
+
 
 
 RANDOM_IMAGE = "Random image"
@@ -136,14 +140,14 @@ def _send_local_file(update, context):
 #         _send_mp3(update, context)
 
 
-# def help(update, context):
-#     update.message.reply_text("""
-# /start   - Start the bot
-# /help    - Help
-# /buttons_below    - Get Optional buttons
-# /buttons_attached - Get Attached buttons
-# """
-#                               )
+def help(update, context):
+    update.message.reply_text("""
+/start   - Start the bot
+/help    - Help
+/buttons_below    - Get Optional buttons
+/buttons_attached - Get Attached buttons
+"""
+                              )
 
 
 # updater = Updater(TOKEN, use_context=True)

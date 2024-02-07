@@ -9,6 +9,7 @@ faker = "*"
 translators = "*"
 selenium = "*"
 telegram = "*"
+telebot = "*"
 
 [dev-packages]
 

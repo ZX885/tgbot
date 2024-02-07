@@ -31,7 +31,7 @@ print("Running up the bot...")
 
 def start():
     # SENDING HELLO MESSAGE
-     .reply_text(message, reply_markup=None, **kwargs)
+     reply_text(message, reply_markup=None, **kwargs)
      update.message.reply_text("Hello there! I'm bot. Nice to see you!")
     # ###################################################################
     # SENDING PHOTO

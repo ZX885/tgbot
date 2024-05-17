@@ -8,8 +8,8 @@ requests = "*"
 faker = "*"
 translators = "*"
 selenium = "*"
-telegram = "*"
 telebot = "*"
+telegram = "*"
 
 [dev-packages]
 

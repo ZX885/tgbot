@@ -1,6 +1,6 @@
-# from requests import *
-# from telegram import *
-# from telegram.ext import *
+from requests import *
+from telegram import *
+from telegram.ext import *
 import telebot
 TOKEN = "6606403897:AAEW3pxmb3fhWPv9Vk5rxONDsyPlsAeD-D8"
 

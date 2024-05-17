@@ -52,9 +52,7 @@ def _send_local_file():
             photo   - Photo to send
             caption - Photo caption, 0-1024 characters
         """
-        bot.reply_photo(f, caption=" Hello!Nice to meet you! 
-        This is Telegram Bot of ZX_Company
-        commands:\start, \help,
+        bot.reply_photo(f, caption="Hello!Nice to meet you! This is Telegram Bot of ZX_Company \n commands:\start, \help,
             ")
 
 

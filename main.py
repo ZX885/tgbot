@@ -46,13 +46,16 @@ def _send_local_file():
         RU: Мы должны открыть файл в двоичном режиме,
         иначе Telegram не сможет обработать его правильно
     """
-    with open("images.jfif", "rb") as f:
+    with open("zx.jpg", "rb") as f:
         """
                 update.message.reply_photo(photo, caption=None)
             photo   - Photo to send
             caption - Photo caption, 0-1024 characters
         """
-        bot.reply_photo(f, caption="Hello!Nice to meet you!")
+        bot.reply_photo(f, caption=" Hello!Nice to meet you! 
+        This is Telegram Bot of ZX_Company
+        commands:\start, \help,
+            ")
 
 
 def _send_mp3(update: Update, context: CallbackContext):
